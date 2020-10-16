@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html>
+<head><center> Calculator
+    <meta charset="utf-8" />
+    <title>Calculator</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head></center><br />
+<body>
+    <center>
+    <input type="text"  id="txtOne" placeholder="Enter First Number"  /><br /><br />
+    <input type="text" id="txtTwo" placeholder="Enter Second Number" /><br /><br />
+    &nbsp;<input type="button" id="btnAdd" value="+" />
+    <input type="button" id="btnSub" value="-" />
+    <input type="button" id="btnMul" value="X" />
+    <input type="button" id="btnDiv" value="/" />
+    <input type="button" id="btnClear" value="Clear" /><br /><br />
+    <input type="text" id="txtAnswer" placeholder="Answer" />
+        </center>
+</body>
+</html>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#btnAdd").click(function () {
+            var firstNumber = $("#txtOne").val();
+            var secondNumber = $("#txtTwo").val();
+            var total = parseInt(firstNumber) + parseInt(secondNumber);
+            document.getElementById("txtAnswer").value = total;
+        });
+            $("#btnSub").click(function () {
+                var firstNumber = $("#txtOne").val();
+                var secondNumber = $("#txtTwo").val();
+                var total = parseInt(firstNumber) - parseInt(secondNumber);
+                document.getElementById("txtAnswer").value = total;
+            }); 
+        $("#btnMul").click(function () {
+            var firstNumber = $("#txtOne").val();
+            var secondNumber = $("#txtTwo").val();
+            var total = parseInt(firstNumber) * parseInt(secondNumber);
+            document.getElementById("txtAnswer").value = total;
+        });
+        $("#btnDiv").click(function () {
+            var firstNumber = $("#txtOne").val();
+            var secondNumber = $("#txtTwo").val();
+            var total = parseInt(firstNumber) / parseInt(secondNumber);
+            document.getElementById("txtAnswer").value = total;
+        });
+        $("#btnClear").click(function () {
+            document.getElementById("txtOne").value = '';
+            document.getElementById("txtTwo").value = '';
+            document.getElementById("txtAnswer").value ='';
+        });
+    });
+</script>
